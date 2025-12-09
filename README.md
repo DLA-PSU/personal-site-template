@@ -2,6 +2,8 @@ Created by Jennifer Isasi for a workshop on personal sites for graduate students
 
 You can preview the site at: [https://dla-psu.github.io/personal-site-template/](https://dla-psu.github.io/personal-site-template/)
 
+GitHub provides a preview of the files before committing changes. However, if you prefer to work on Markdown and HTML files locally before adding them to yuor repository, I recommend using [Zettler](https://www.zettlr.com) or [Visual Code Studio](https://code.visualstudio.com). 
+
 # personal-site-template
 
 A template to create simple personal sites with bio, projects and CV. It turns simple markdown files into web pages. No coding required for updates.
