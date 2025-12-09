@@ -1,3 +1,5 @@
+Created by Jennifer Isasi for a workshop on personal sites for graduate students. Last updated December 8, 2025.
+
 # personal-site-template
 
 A template to create simple personal sites with bio, projects and CV. It turns simple markdown files into web pages. No coding required for updates.
