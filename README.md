@@ -16,8 +16,8 @@ The site has four pages:
 - [About Page: Choose Your Version](#about-page-choose-your-version)
   - [Option A: About Page with Progress Tracker](#option-a-simple-about-page-default---currently-active)
   - [Option B: Simple Text-Only About Page](#option-b-simple-text-only-about-page)
-- [How to Make Changes](#how-to-make-changes)
 - [What's in Each Folder](#whats-in-each-folder)
+- [How to Make Changes](#how-to-make-changes)
 - [Optional Features](#optional-features)
   - [PhD Progress Tracker](#phd-progress-tracker)
 - [Adding a New Project](#adding-a-new-project)
@@ -72,11 +72,12 @@ This template offers **two options** for your About page (the homepage). Choose 
 2. Click the pencil icon to edit
 3. Update your information directly in the HTML
 4. The timeline items are easy to copy/paste to add more
-5. To enable the PhD progress tracker, find the HTML comment `<!-- OPTIONAL PhD PROGRESS TRACKER` and delete the `<!--` at the start and `-->` at the end
+5. To disable the PhD progress tracker, add the HTML comment `<!-- OPTIONAL PhD PROGRESS TRACKER` and delete the `<!--` at the start of the block and `-->` at the end
 
 **To customize the footer:**
 - Find the footer section near the bottom of `about.html`
 - Replace `[Your Name]` with your actual name
+- Replace year for when you created the site
 
 ### Option B: Simple Text-Only About Page
 
@@ -101,7 +102,25 @@ This template offers **two options** for your About page (the homepage). Choose 
 5. Commit the changes
 6. Edit `content/about.md` with your information using simple Markdown
 
-**Note:** You can keep both `about.html` and `content/about.md` in your repository. Only one will be used based on what's in the workflow file.
+**Note:** You can keep both `about.html` and `content/about.md` in your repository. *Only one will be used based on what's in the workflow file.*
+
+## What's in Each Folder
+
+**Root folder files:**
+- `about.html` - About page with timeline (Option A - default)
+- `template.html` - The page layout for Markdown pages
+- `styles.css` - Colors and fonts for the entire site
+- `.github/workflows/deploy.yml` - Instructions for GitHub on how to build the site
+
+**content/** - Markdown files that get converted to pages
+- `about.md` - Simple about page (Option B - not used by default)
+- `projects-main.md` - Your projects in your primary language
+- `projects-alt.md` - Your projects in an alternative language
+- `cv.md` - Your resume/CV
+
+**images/** - All pictures and screenshots
+- `photo.jpg` - Your profile photo
+- Any project screenshots you want to show
 
 ## How to Make Changes
 
@@ -135,6 +154,7 @@ That's it. The website rebuilds itself automatically.
    </footer>
    ```
    - Replace `[Your Name]` with your actual name
+   - Replace year with the year when you created the site
 
 **2. For all other pages (Projects, CV):**
    - Open `template.html`
@@ -145,6 +165,7 @@ That's it. The website rebuilds itself automatically.
    </footer>
    ```
    - Replace `[Your Name]` with your actual name
+   -  - Replace year with the year when you created the site
 
 Make sure both footers match exactly so all pages look consistent!
 
@@ -156,24 +177,6 @@ Make sure both footers match exactly so all pages look consistent!
 4. Example: Change "Proyectos" to "Projets" for French, "Projekte" for German, etc.
 
 If you're using Option A (about.html), also update the navigation in `about.html` to match.
-
-## What's in Each Folder
-
-**Root folder files:**
-- `about.html` - About page with timeline (Option A - default)
-- `template.html` - The page layout for Markdown pages
-- `styles.css` - Colors and fonts for the entire site
-- `.github/workflows/deploy.yml` - Instructions for GitHub on how to build the site
-
-**content/** - Markdown files that get converted to pages
-- `about.md` - Simple about page (Option B - not used by default)
-- `projects-main.md` - Your projects in your primary language
-- `projects-alt.md` - Your projects in an alternative language
-- `cv.md` - Your resume/CV
-
-**images/** - All pictures and screenshots
-- `photo.jpg` - Your profile photo
-- Any project screenshots you want to show
 
 ## Optional Features
 
