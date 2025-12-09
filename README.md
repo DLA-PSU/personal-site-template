@@ -1,15 +1,17 @@
-Created by Jennifer Isasi for a workshop on personal sites for graduate students. Last updated December 8, 2025.
+# personal-site-template
+
+Created by [Jennifer Isasi](https://jenniferisasi.github.io) for a workshop on personal sites for graduate students. Last updated December 8, 2025.
 
 You can preview the site at: [https://dla-psu.github.io/personal-site-template/](https://dla-psu.github.io/personal-site-template/)
 
-GitHub provides a preview of the files before committing changes. However, if you prefer to work on Markdown and HTML files locally before adding them to yuor repository, I recommend using [Zettler](https://www.zettlr.com) or [Visual Code Studio](https://code.visualstudio.com). 
+GitHub provides a preview of the files before committing changes. However, if you prefer to work on Markdown and HTML files locally before adding them to your repository, I recommend using [Zettlr](https://www.zettlr.com) or [Visual Studio Code](https://code.visualstudio.com).
 
-# personal-site-template
+---
 
 A template to create simple personal sites with bio, projects and CV. It turns simple markdown files into web pages. No coding required for updates.
 
 The site has four pages:
-- About page (homepage) - with optional timeline and PhD progress tracker
+- About page (homepage) - with optional PhD progress tracker
 - Projects page in your main language
 - Projects page in an alternative language
 - CV/Resume page
@@ -20,8 +22,8 @@ The site has four pages:
 - [About Page: Choose Your Version](#about-page-choose-your-version)
   - [Option A: About Page with Progress Tracker](#option-a-simple-about-page-default---currently-active)
   - [Option B: Simple Text-Only About Page](#option-b-simple-text-only-about-page)
-- [What's in Each Folder](#whats-in-each-folder)
 - [How to Make Changes](#how-to-make-changes)
+- [What's in Each Folder](#whats-in-each-folder)
 - [Optional Features](#optional-features)
   - [PhD Progress Tracker](#phd-progress-tracker)
 - [Adding a New Project](#adding-a-new-project)
@@ -39,7 +41,11 @@ If you want to use this template for your own site:
 
 1. Click the green "Use this template" button at the top of this page
 2. Choose "Create a new repository"
-3. Name your repository anything you want (like `my-portfolio` or `personal-site`)
+3. **Name your repository:** You have two options here:
+   - **For a clean URL** (recommended): Name it `your-username.github.io` (replace `your-username` with your actual GitHub username)
+     - Your site will be at: `https://your-username.github.io/`
+   - **For a project site**: Name it anything you want (like `my-portfolio` or `personal-site`)
+     - Your site will be at: `https://your-username.github.io/repository-name/`
 4. Make sure it's set to "Public"
 5. Click "Create repository"
 
@@ -50,13 +56,13 @@ GitHub will copy all these files to your new repository. Then you can edit them 
 1. Go to Settings in your new repository
 2. Click "Pages" on the left side
 3. Under "Source", select "GitHub Actions"
-4. Your site will be live at `https://your-username.github.io/repository-name`
+4. Your site will be live in 2-3 minutes!
 
 ## About Page: Choose Your Version
 
 This template offers **two options** for your About page (the homepage). Choose the one that fits your needs.
 
-**[👉 View Visual Comparison of Both Options](https://jenniferisasi.github.io/personal-site-template/about-options.html)**
+**[👉 View Visual Comparison of Both Options](https://dla-psu.github.io/personal-site-template/about-options.html)**
 
 ### Option A: Simple About Page (Default - Currently Active)
 
@@ -76,12 +82,11 @@ This template offers **two options** for your About page (the homepage). Choose 
 2. Click the pencil icon to edit
 3. Update your information directly in the HTML
 4. The timeline items are easy to copy/paste to add more
-5. To disable the PhD progress tracker, add the HTML comment `<!-- OPTIONAL PhD PROGRESS TRACKER` and delete the `<!--` at the start of the block and `-->` at the end
+5. To enable the PhD progress tracker, find the HTML comment `<!-- OPTIONAL PhD PROGRESS TRACKER` and delete the `<!--` at the start and `-->` at the end
 
 **To customize the footer:**
 - Find the footer section near the bottom of `about.html`
 - Replace `[Your Name]` with your actual name
-- Replace year for when you created the site
 
 ### Option B: Simple Text-Only About Page
 
@@ -106,25 +111,7 @@ This template offers **two options** for your About page (the homepage). Choose 
 5. Commit the changes
 6. Edit `content/about.md` with your information using simple Markdown
 
-**Note:** You can keep both `about.html` and `content/about.md` in your repository. *Only one will be used based on what's in the workflow file.*
-
-## What's in Each Folder
-
-**Root folder files:**
-- `about.html` - About page with timeline (Option A - default)
-- `template.html` - The page layout for Markdown pages
-- `styles.css` - Colors and fonts for the entire site
-- `.github/workflows/deploy.yml` - Instructions for GitHub on how to build the site
-
-**content/** - Markdown files that get converted to pages
-- `about.md` - Simple about page (Option B - not used by default)
-- `projects-main.md` - Your projects in your primary language
-- `projects-alt.md` - Your projects in an alternative language
-- `cv.md` - Your resume/CV
-
-**images/** - All pictures and screenshots
-- `photo.jpg` - Your profile photo
-- Any project screenshots you want to show
+**Note:** You can keep both `about.html` and `content/about.md` in your repository. Only one will be used based on what's in the workflow file.
 
 ## How to Make Changes
 
@@ -158,7 +145,6 @@ That's it. The website rebuilds itself automatically.
    </footer>
    ```
    - Replace `[Your Name]` with your actual name
-   - Replace year with the year when you created the site
 
 **2. For all other pages (Projects, CV):**
    - Open `template.html`
@@ -169,7 +155,6 @@ That's it. The website rebuilds itself automatically.
    </footer>
    ```
    - Replace `[Your Name]` with your actual name
-   -  - Replace year with the year when you created the site
 
 Make sure both footers match exactly so all pages look consistent!
 
@@ -181,6 +166,24 @@ Make sure both footers match exactly so all pages look consistent!
 4. Example: Change "Proyectos" to "Projets" for French, "Projekte" for German, etc.
 
 If you're using Option A (about.html), also update the navigation in `about.html` to match.
+
+## What's in Each Folder
+
+**Root folder files:**
+- `about.html` - About page with timeline (Option A - default)
+- `template.html` - The page layout for Markdown pages
+- `styles.css` - Colors and fonts for the entire site
+- `.github/workflows/deploy.yml` - Instructions for GitHub on how to build the site
+
+**content/** - Markdown files that get converted to pages
+- `about.md` - Simple about page (Option B - not used by default)
+- `projects-main.md` - Your projects in your primary language
+- `projects-alt.md` - Your projects in an alternative language
+- `cv.md` - Your resume/CV
+
+**images/** - All pictures and screenshots
+- `photo.jpg` - Your profile photo
+- Any project screenshots you want to show
 
 ## Optional Features
 
@@ -282,7 +285,7 @@ After making changes, commit the file and your site will update in 2-3 minutes!
 3. Copy everything from one `---` line to the next `---` line
 4. Paste it where you want the new project
 5. Change the title, date, description, etc.
-6. 6. Save by clicking "Commit changes"
+6. Save by clicking "Commit changes"
 
 Do the same thing in `content/projects-alt.md` for the alternative language version.
 
@@ -320,11 +323,12 @@ Markdown is just text with some symbols for formatting. Here's what you can use:
 
 If you want to learn markdown better, I recommend you read: [Getting Started with Markdown](https://programminghistorian.org/en/lessons/getting-started-with-markdown) by Sarah Simpkin
 
-## Basic HTML Formatting
+## Basic HTML Editing
 
-If you're using Option A (about.html), you'll be editing HTML directly. Don't worry, HTML is just text with tags that tell the browser how to display things. Here's what you need to know:
+If you're using Option A (about.html), you'll be editing HTML directly. Don't worry - HTML is just text with tags that tell the browser how to display things. Here's what you need to know:
 
-html<h1>Big heading</h1>
+```html
+<h1>Big heading</h1>
 <h2>Smaller heading</h2>
 <h3>Even smaller heading</h3>
 
@@ -336,11 +340,11 @@ html<h1>Big heading</h1>
 <a href="https://website.com">Link text</a>
 
 <img src="./images/photo.jpg" alt="Description">
+```
 
-The about.html file has clear comments showing you exactly what to edit. Look for text between <!-- and --> - those are comments that explain what each section does.
+The `about.html` file has clear comments showing you exactly what to edit. Look for text between `<!--` and `-->` - those are comments that explain what each section does.
 
-If you want to learn more about HTML, I recommend you read: ["Understanding Web Pages and HTML"](https://programminghistorian.org/en/lessons/viewing-html-files) by William J. Turkel and Adam Crymble
-
+If you want to learn more about HTML, I recommend you read: [Viewing HTML Files](https://programminghistorian.org/en/lessons/viewing-html-files) by William J. Turkel and Adam Crymble
 
 ## How It Actually Works
 
