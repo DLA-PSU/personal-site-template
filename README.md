@@ -1,30 +1,31 @@
 # personal-site-template
 
-Created by [Jennifer Isasi](https://jenniferisasi.github.io) for a workshop on personal sites for graduate students. Last updated December 8, 2025.
+Created by [Jennifer Isasi](https://jenniferisasi.github.io) for a workshop on personal sites for graduate students. Last updated December 2025.
 
-You can preview the site at: [https://dla-psu.github.io/personal-site-template/](https://dla-psu.github.io/personal-site-template/)
+You can preview the site at: https://dla-psu.github.io/personal-site-template/
 
-GitHub provides a preview of the files before committing changes. However, if you prefer to work on Markdown and HTML files locally before adding them to your repository, I recommend using [Zettlr](https://www.zettlr.com) or [Visual Studio Code](https://code.visualstudio.com).
+GitHub provides a preview of files before committing changes. If you prefer to work locally, we recommend [Visual Studio Code](https://code.visualstudio.com) or [Zettlr](https://www.zettlr.com).
 
 ---
 
-A template to create simple personal sites with bio, projects and CV. It turns simple markdown files into web pages. No coding required for updates.
+A template to create a simple, static personal site with bio, projects, and CV. It turns Markdown files into web pages automatically. No coding required for updates.
 
 The site has four pages:
-- About page (homepage) - with optional PhD progress tracker
-- Projects page in your main language
-- Projects page in an alternative language
-- CV/Resume page
+
+- **About** (homepage) — with visual timeline and optional PhD progress tracker
+- **Projects** — in your primary language
+- **Projects** — in an alternative language
+- **CV/Resume**
+
+---
 
 ## Table of Contents
 
 - [Using This Template](#using-this-template)
-- [About Page: Choose Your Version](#about-page-choose-your-version)
-  - [Option A: About Page with Progress Tracker](#option-a-simple-about-page-default---currently-active)
-  - [Option B: Simple Text-Only About Page](#option-b-simple-text-only-about-page)
 - [How to Make Changes](#how-to-make-changes)
 - [What's in Each Folder](#whats-in-each-folder)
-- [Optional Features](#optional-features)
+- [Customizing the About Page](#customizing-the-about-page)
+  - [Timeline](#timeline)
   - [PhD Progress Tracker](#phd-progress-tracker)
 - [Adding a New Project](#adding-a-new-project)
 - [Adding Images](#adding-images)
@@ -35,275 +36,201 @@ The site has four pages:
 - [Want to Change the Design?](#want-to-change-the-design)
 - [Want to Add More Project Pages?](#want-to-add-more-project-pages)
 
+---
+
 ## Using This Template
 
-If you want to use this template for your own site:
+1. Click the green **"Use this template"** button at the top of this page
+2. Choose **"Create a new repository"**
+3. **Name your repository:**
+   - **For a clean URL** (recommended): Name it `your-username.github.io`
+     → Your site will be at `https://your-username.github.io/`
+   - **For a project site**: Name it anything (e.g. `my-portfolio`)
+     → Your site will be at `https://your-username.github.io/repository-name/`
+4. Set it to **Public**
+5. Click **"Create repository"**
 
-1. Click the green "Use this template" button at the top of this page
-2. Choose "Create a new repository"
-3. **Name your repository:** You have two options here:
-   - **For a clean URL** (recommended): Name it `your-username.github.io` (replace `your-username` with your actual GitHub username)
-     - Your site will be at: `https://your-username.github.io/`
-   - **For a project site**: Name it anything you want (like `my-portfolio` or `personal-site`)
-     - Your site will be at: `https://your-username.github.io/repository-name/`
-4. Make sure it's set to "Public"
-5. Click "Create repository"
+GitHub will copy all files to your new repo. Then you can edit them with your own information.
 
-GitHub will copy all these files to your new repository. Then you can edit them with your own information.
+**Enable GitHub Pages after copying:**
 
-**After copying, you'll need to enable GitHub Pages:**
+1. Go to **Settings** in your new repository
+2. Click **Pages** on the left side
+3. Under "Source", select **GitHub Actions**
+4. Your site will be live in 2–3 minutes
 
-1. Go to Settings in your new repository
-2. Click "Pages" on the left side
-3. Under "Source", select "GitHub Actions"
-4. Your site will be live in 2-3 minutes!
-
-## About Page: Choose Your Version
-
-This template offers **two options** for your About page (the homepage). Choose the one that fits your needs.
-
-**[👉 View Visual Comparison of Both Options](https://dla-psu.github.io/personal-site-template/about-options.html)**
-
-### Option A: Simple About Page (Default - Currently Active)
-
-**Best for:** Showcasing your journey with a visual timeline and optional PhD progress tracker
-
-**File to edit:** `about.html` (in repository root, not in content folder)
-
-**Features:**
-- Profile photo
-- Bio sections
-- Visual timeline showing your career/education journey
-- Optional PhD progress tracker
-- Contact information
-
-**How to edit:**
-1. Find `about.html` in the root of your repository
-2. Click the pencil icon to edit
-3. Update your information directly in the HTML
-4. The timeline items are easy to copy/paste to add more
-5. To enable the PhD progress tracker, find the HTML comment `<!-- OPTIONAL PhD PROGRESS TRACKER` and delete the `<!--` at the start and `-->` at the end
-
-**To customize the footer:**
-- Find the footer section near the bottom of `about.html`
-- Replace `[Your Name]` with your actual name
-
-### Option B: Simple Text-Only About Page
-
-**Best for:** A clean, simple bio without timeline or progress tracking
-
-**File to edit:** `content/about.md`
-
-**How to switch to this option:**
-
-1. Delete `about.html` from the repository root
-2. Open `.github/workflows/deploy.yml`
-3. Find the line that says `cp about.html _site/index.html`
-4. Replace it with:
-```yaml
-          # Convert about page (index)
-          pandoc content/about.md -o _site/index.html \
-            --from markdown+raw_html \
-            --template=./template.html \
-            --metadata title="About Me" \
-            --metadata page="about"
-```
-5. Commit the changes
-6. Edit `content/about.md` with your information using simple Markdown
-
-**Note:** You can keep both `about.html` and `content/about.md` in your repository. Only one will be used based on what's in the workflow file.
+---
 
 ## How to Make Changes
 
-### For most pages (Projects, CV):
+### For Projects and CV pages:
 
-1. Navigate to the file in the `content` folder (example: `content/projects-main.md`)
-2. Click the pencil icon in the top right corner
-3. Edit the text using Markdown
-4. Scroll to the bottom and click "Commit changes"
-5. Wait 2-3 minutes for the site to update
+1. Navigate to the file in the `content/` folder (e.g. `content/projects-main.md`)
+2. Click the pencil icon in the top right
+3. Edit using Markdown
+4. Scroll to the bottom and click **"Commit changes"**
+5. Wait 2–3 minutes for the site to update
 
-### For the About page (if using Option A with timeline):
+### For the About page:
 
 1. Navigate to `about.html` in the root folder
 2. Click the pencil icon
-3. Edit the HTML directly (it's clearly structured with comments)
+3. Edit the HTML directly — it's clearly structured with comments explaining each section
 4. Commit changes
 
-That's it. The website rebuilds itself automatically.
+### Updating the Footer
 
-### To Edit the Footer
+The footer appears in two places and should match on all pages.
 
-**Important:** The footer needs to be updated in TWO places to keep it consistent across all pages.
+**1. About page footer** — open `about.html` and find:
 
-**1. For the About page (if using Option A):**
-   - Open `about.html`
-   - Find the footer section near the bottom:
-   ```html
-   <footer>
-       <p>&copy; 2024 [Your Name]. All rights reserved.</p>
-   </footer>
-   ```
-   - Replace `[Your Name]` with your actual name
+```html
+<footer>
+    <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+</footer>
+```
 
-**2. For all other pages (Projects, CV):**
-   - Open `template.html`
-   - Find the footer section:
-   ```html
-   <footer>
-       <p>&copy; 2024 [Your Name]. All rights reserved.</p>
-   </footer>
-   ```
-   - Replace `[Your Name]` with your actual name
+**2. All other pages** — open `template.html` and find the same block.
 
-Make sure both footers match exactly so all pages look consistent!
+Replace `[Your Name]` with your name in both files.
 
-### To Change the Language Labels in Navigation
+### Changing Navigation Language Labels
 
-1. Navigate to `template.html`
-2. Find the navigation section
-3. Change "Projects" and "Proyectos" to your preferred language labels
-4. Example: Change "Proyectos" to "Projets" for French, "Projekte" for German, etc.
+1. Open `template.html`
+2. Find the `<nav>` section
+3. Change "Projects" and "Proyectos" to your preferred labels (e.g. "Projets" for French, "Projekte" for German)
+4. Make the same update in `about.html` to keep navigation consistent
 
-If you're using Option A (about.html), also update the navigation in `about.html` to match.
+---
 
 ## What's in Each Folder
 
-**Root folder files:**
-- `about.html` - About page with timeline (Option A - default)
-- `template.html` - The page layout for Markdown pages
-- `styles.css` - Colors and fonts for the entire site
-- `.github/workflows/deploy.yml` - Instructions for GitHub on how to build the site
+**Root folder:**
 
-**content/** - Markdown files that get converted to pages
-- `about.md` - Simple about page (Option B - not used by default)
-- `projects-main.md` - Your projects in your primary language
-- `projects-alt.md` - Your projects in an alternative language
-- `cv.md` - Your resume/CV
+| File | Purpose |
+|------|---------|
+| `about.html` | About page / homepage (timeline + optional PhD tracker) |
+| `template.html` | Page layout used for all Markdown-based pages |
+| `styles.css` | Colors and fonts for the entire site |
+| `.github/workflows/deploy.yml` | Instructions for GitHub on how to build the site |
 
-**images/** - All pictures and screenshots
-- `photo.jpg` - Your profile photo
-- Any project screenshots you want to show
+**`content/`** — Markdown files converted to pages:
 
-## Optional Features
+| File | Purpose |
+|------|---------|
+| `projects-main.md` | Projects in your primary language |
+| `projects-alt.md` | Projects in an alternative language |
+| `cv.md` | Your CV/resume |
 
-### PhD Progress Tracker
+**`images/`** — All photos and screenshots:
 
-If you're pursuing a PhD or graduate degree, you can enable a progress tracker on your About page (only available with Option A).
+| File | Purpose |
+|------|---------|
+| `photo.jpg` | Your profile photo |
+| *(other files)* | Project screenshots, etc. |
 
-**To enable it:**
+---
 
-1. Open `about.html`
-2. Find the section marked `<!-- OPTIONAL PhD PROGRESS TRACKER`
-3. Delete the line with `<!--` at the beginning of that section
-4. Scroll down and delete the line with `-->` at the end
-5. Commit your changes
+## Customizing the About Page
 
-**To customize it:**
+The About page (`about.html`) is an HTML file with clearly labeled comment blocks. You edit it directly in GitHub by clicking the pencil icon.
 
-Edit the following in `about.html`:
-- **Degree title**: Change "PhD in Computer Science"
-- **Year progress**: Update "Year 3 of 5"
-- **Institution**: Change "University Name"
-- **Expected completion**: Update "Expected 2026"
-- **Progress percentage**: Change `60%` in two places (the displayed number and `width: 60%`)
-- **Milestones**: Add, remove, or edit milestones
+### Timeline
 
-**Milestone status:**
-- `class="completed"` - Shows green with ✓
-- `class="in-progress"` - Shows orange with ⚡
-- No class attribute - Shows gray with ◯
+The timeline displays your education and career history. Items are listed with the most recent at the top.
 
-### Adding Timeline Items
-
-To add more items to your timeline (if using Option A):
+**To add a new timeline item:**
 
 1. Open `about.html`
 2. Find the timeline section
-3. Copy an existing timeline item block:
+3. Copy an existing block:
+
 ```html
 <div class="timeline-item">
     <div class="timeline-dot"></div>
     <div class="timeline-content">
-        <div class="timeline-date">YEAR - YEAR</div>
-        <h3>Position/Degree Title</h3>
-        <h4>Company/Institution</h4>
+        <div class="timeline-date">YEAR – YEAR</div>
+        <h3>Position or Degree Title</h3>
+        <h4>Company or Institution</h4>
         <p>Description of what you did.</p>
     </div>
 </div>
 ```
-4. Paste it where you want it (most recent at top)
+
+4. Paste it in place (most recent at the top)
 5. Update with your information
 
-### Customizing the PhD Progress Tracker Appearance
+### PhD Progress Tracker
 
-If you're using the PhD progress tracker, you can customize its colors and styling:
+An optional section you can enable to display your degree progress, milestones, and expected completion.
 
-**To change the progress bar color:**
-1. Open `styles.css`
-2. Find `.progress-fill` (around line 180)
-3. Change the `background` color:
-```css
-.progress-fill {
-    background: linear-gradient(90deg, #3498db, #2ecc71);
-    /* Change to: background: #your-color-here; */
-}
-```
+**To enable it:**
 
-**To change milestone status colors:**
-1. In `styles.css`, find these sections:
-   - `.milestone.completed .milestone-title` - Controls completed items (default: green `#27ae60`)
-   - `.milestone.in-progress .milestone-title` - Controls in-progress items (default: orange `#f39c12`)
-   - Default milestones without status use gray
+1. Open `about.html`
+2. Find the section starting with `<!-- OPTIONAL PhD PROGRESS TRACKER`
+3. Delete the `<!--` line at the beginning of the section
+4. Scroll down and delete the `-->` line at the end
+5. Commit your changes
 
-2. Change the color values:
-```css
-.milestone.completed .milestone-title {
-    color: #27ae60;  /* Change to your preferred "completed" color */
-}
+**To customize it, update these fields inside `about.html`:**
 
-.milestone.in-progress .milestone-title {
-    color: #f39c12;  /* Change to your preferred "in-progress" color */
-}
-```
+- **Degree title** — e.g. "PhD in History"
+- **Year progress** — e.g. "Year 2 of 5"
+- **Institution name**
+- **Expected completion year**
+- **Progress percentage** — change `60%` in two places (the displayed label and `width: 60%`)
+- **Milestones** — add, remove, or reorder as needed
 
-**To change the progress tracker border:**
-1. Find `.phd-progress` in `styles.css`
-2. Change `border-left: 4px solid #3498db;` to your preferred color
+**Milestone status classes:**
 
-**Popular color combinations:**
-- **Professional Blue:** Progress bar `#2563eb`, completed `#1e40af`
-- **Academic Purple:** Progress bar `#8b5cf6`, completed `#6d28d9`
-- **Success Green:** Progress bar `#10b981`, completed `#059669`
+| Class | Appearance |
+|-------|-----------|
+| `class="completed"` | Green with ✓ |
+| `class="in-progress"` | Orange with ⚡ |
+| *(no class)* | Gray with ◯ |
 
-After making changes, commit the file and your site will update in 2-3 minutes!
+**To customize tracker colors in `styles.css`:**
+
+- **Progress bar**: find `.progress-fill` and update the `background` value
+- **Completed milestones**: find `.milestone.completed .milestone-title` and change the color
+- **In-progress milestones**: find `.milestone.in-progress .milestone-title` and change the color
+- **Tracker border**: find `.phd-progress` and change `border-left: 4px solid #3498db;`
+
+Popular color combinations:
+- Professional Blue: `#2563eb` / `#1e40af`
+- Academic Purple: `#8b5cf6` / `#6d28d9`
+- Success Green: `#10b981` / `#059669`
+
+---
 
 ## Adding a New Project
 
 1. Open `content/projects-main.md`
 2. Find an existing project section
-3. Copy everything from one `---` line to the next `---` line
+3. Copy everything from one `---` divider to the next
 4. Paste it where you want the new project
-5. Change the title, date, description, etc.
-6. Save by clicking "Commit changes"
+5. Update the title, date, description, and any other fields
+6. Commit changes
 
-Do the same thing in `content/projects-alt.md` for the alternative language version.
+Repeat in `content/projects-alt.md` for the alternative-language version.
+
+---
 
 ## Adding Images
 
-To add a screenshot or photo:
+1. In your repository, click **"Add file"** → **"Upload files"**
+2. Upload your image to the `images/` folder
+3. Reference it in a Markdown file:
 
-1. Click "Add file" at the top, then "Upload files"
-2. Upload your image to the `images` folder
-3. In your Markdown file, add this line where you want the image:
 ```markdown
 ![Description of image](./images/my-image.jpg)
 ```
-4. Replace `my-image.jpg` with whatever you named the file
+
+Replace `my-image.jpg` with your actual filename. Filenames are case-sensitive.
+
+---
 
 ## Basic Markdown Formatting
-
-Markdown is just text with some symbols for formatting. Here's what you can use:
 
 ```markdown
 # Big heading
@@ -321,104 +248,90 @@ Markdown is just text with some symbols for formatting. Here's what you can use:
 ![Image description](./images/photo.jpg)
 ```
 
-If you want to learn markdown better, I recommend you read: [Getting Started with Markdown](https://programminghistorian.org/en/lessons/getting-started-with-markdown) by Sarah Simpkin
+For a deeper intro, see: [Getting Started with Markdown](https://programminghistorian.org/en/lessons/getting-started-with-markdown) by Sarah Simpkin.
+
+---
 
 ## Basic HTML Editing
 
-If you're using Option A (about.html), you'll be editing HTML directly. Don't worry - HTML is just text with tags that tell the browser how to display things. Here's what you need to know:
+The About page uses HTML. Here are the essentials:
 
 ```html
 <h1>Big heading</h1>
 <h2>Smaller heading</h2>
-<h3>Even smaller heading</h3>
+<p>This is a paragraph.</p>
 
-<p>This is a paragraph of text.</p>
-
-<strong>bold text</strong>
-<em>italic text</em>
+<strong>bold</strong>
+<em>italic</em>
 
 <a href="https://website.com">Link text</a>
-
 <img src="./images/photo.jpg" alt="Description">
 ```
 
-The `about.html` file has clear comments showing you exactly what to edit. Look for text between `<!--` and `-->` - those are comments that explain what each section does.
+The `about.html` file has comments (text between `<!--` and `-->`) explaining what each section does — you don't need to touch anything outside those labeled areas.
 
-If you want to learn more about HTML, I recommend you read: [Viewing HTML Files](https://programminghistorian.org/en/lessons/viewing-html-files) by William J. Turkel and Adam Crymble
+For more: [Viewing HTML Files](https://programminghistorian.org/en/lessons/viewing-html-files) by William J. Turkel and Adam Crymble.
+
+---
 
 ## How It Actually Works
 
-When you save changes, GitHub runs a process in the background to build your website:
+When you commit changes, GitHub automatically rebuilds your site:
 
-**For Markdown files** (Projects, CV):
-1. GitHub takes your Markdown files
-2. Converts them to HTML web pages using a tool called Pandoc
-3. Wraps them in the template (adds the navigation menu, styling, etc.)
-4. Publishes everything to the web
+- **Markdown files** (Projects, CV): converted to HTML using Pandoc, then wrapped in `template.html` (which adds navigation and styling)
+- **`about.html`**: copied directly to the site — no conversion needed
+- **Images and CSS**: copied as-is
 
-**For HTML files** (About page with Option A):
-1. GitHub copies the HTML file directly to your site
-2. No conversion needed - it's already in HTML
-3. This is why the progress tracker and interactive elements work perfectly
+This all happens in 2–3 minutes. You never need to trigger it manually.
 
-**For images and CSS**:
-1. These files are copied as-is to your site
-2. No processing or conversion happens
-
-This all happens automatically in 2-3 minutes. You never see it or interact with it. You just edit files in GitHub, and the website updates itself!
+---
 
 ## Troubleshooting
 
-**My changes aren't showing up**
-- Wait 3-5 minutes after saving. The site needs time to rebuild.
-- Check the "Actions" tab at the top. If there's a red X, something went wrong. Click it to see what.
+**Changes aren't showing up**
+Wait 3–5 minutes. Then check the **Actions** tab — a red ✗ means something went wrong. Click it for details.
 
-**My image isn't appearing**
-- Make sure the image is in the `images` folder
-- Check that the filename matches exactly (including .jpg or .png)
-- Image paths should look like: `./images/filename.jpg`
+**Image not appearing**
+Make sure the file is in the `images/` folder and the filename in your Markdown matches exactly (including the extension and capitalization).
 
-**The timeline or progress tracker isn't showing correctly**
-- Make sure you're using Option A (about.html)
-- Check that you have the timeline CSS in `styles.css`
-- Verify that HTML comment tags `<!--` and `-->` are properly removed if you want to show the PhD tracker
+**Timeline or progress tracker not displaying correctly**
+Check that you've removed the `<!--` and `-->` comment wrappers fully, and that `styles.css` contains the timeline styles.
 
-**I broke something**
-- Don't worry! GitHub keeps history of all changes
-- Click on the file, then "History" at the top right
-- Find the last working version and click the three dots to revert
+**Something broke**
+GitHub keeps a full history of changes. Go to the file → click **History** → find the last working version → use the three-dot menu to revert.
+
+---
 
 ## Want to Change the Design?
 
-If you want different colors or fonts, you can edit `styles.css`. The main colors in the file are:
-- `#3498db` - The blue accent color
-- `#2c3e50` - The dark blue/gray navigation bar
+Edit `styles.css` to change colors or fonts. The two main colors used throughout the site are:
 
-To change colors:
-1. Visit [color-hex.com/color-palettes](https://www.color-hex.com/color-palettes/) to browse color palette ideas
-2. Pick colors you like and copy their hex codes
-3. Open `styles.css` in your repository
-4. Search for `#3498db` and replace it with your new primary color
-5. Search for `#2c3e50` and replace it with your new dark color
-6. Commit the changes
+- `#3498db` — blue accent color
+- `#2c3e50` — dark navigation bar
 
-Your site will update automatically in 2-3 minutes!
+To change them:
+1. Browse palettes at [color-hex.com/color-palettes](https://www.color-hex.com/color-palettes/)
+2. Copy your preferred hex codes
+3. Open `styles.css` and do a find-and-replace for the existing values
+4. Commit — site updates in 2–3 minutes
+
+---
 
 ## Want to Add More Project Pages?
 
-If you need a third (or fourth) project page in another language, here's how:
+### Step 1: Create the new Markdown file
 
-### Step 1: Create the New Markdown File
-1. Go to the `content/` folder
-2. Click "Add file" → "Create new file"
-3. Name it `projects-lang3.md` (or any name you want)
+1. Go to `content/`
+2. Click **"Add file"** → **"Create new file"**
+3. Name it (e.g. `projects-lang3.md`)
 4. Copy content from `projects-main.md` and translate it
-5. Commit the file
+5. Commit
 
-### Step 2: Update the Workflow
+### Step 2: Update the workflow
+
 1. Open `.github/workflows/deploy.yml`
-2. Find the "Convert Markdown to HTML" section
-3. Add these lines before the "Convert CV" part:
+2. In the Markdown conversion section, add before the CV step:
+
 ```yaml
           # Convert projects (third language)
           pandoc content/projects-lang3.md -o _site/projects-lang3.html \
@@ -427,17 +340,19 @@ If you need a third (or fourth) project page in another language, here's how:
             --metadata title="Projects" \
             --metadata page="projects-lang3"
 ```
-4. Commit changes
 
-### Step 3: Update the Navigation Menu
+3. Commit
+
+### Step 3: Add a navigation link
+
 1. Open `template.html`
-2. Find the `<nav>` section
-3. Add a new line in the menu:
-```html
-<li><a href="./projects-lang3.html">项目</a></li>
-```
-(Replace "项目" with your language label)
-4. If using Option A (about.html), also add this line to the navigation in `about.html`
-5. Commit changes
+2. Find the `<nav>` section and add:
 
-Your new project page will appear in the navigation menu and be accessible on your site!
+```html
+<li><a href="./projects-lang3.html">Your Label</a></li>
+```
+
+3. Add the same link to the `<nav>` section in `about.html`
+4. Commit
+
+Your new project page will appear in the navigation on all pages.
