@@ -1,10 +1,10 @@
 # personal-site-template
 
-Created by [Jennifer Isasi](https://jenniferisasi.github.io) for a workshop on personal sites for graduate students. Last updated December 2025.
+Created by [Jennifer Isasi](https://jenniferisasi.github.io) for a workshop on personal sites for graduate students. Last updated February 2026. 
 
 You can preview the site at: https://dla-psu.github.io/personal-site-template/
 
-GitHub provides a preview of files before committing changes. If you prefer to work locally, we recommend [Visual Studio Code](https://code.visualstudio.com) or [Zettlr](https://www.zettlr.com).
+GitHub provides a preview of files before committing changes. If you prefer to work locally, we recommend [Zettlr](https://www.zettlr.com) to work on the files or [Visual Studio Code](https://code.visualstudio.com) if you want to avoid the online GitHub interface. 
 
 ---
 
