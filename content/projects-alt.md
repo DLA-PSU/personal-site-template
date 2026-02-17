@@ -1,3 +1,11 @@
+<div class="note">
+💡 This page uses Markdown. Not sure how to format things? See the <a href="https://github.com/DLA-PSU/personal-site-template#basic-markdown-formatting">Markdown guide</a> in the README.
+</div>  <!-- (delete all above here on your file)-->
+
+<!-- EDITOR NOTE:If you don't need this file as an alternative project page for another language or a second project, you can hidde it from the navigation menu until ready to use it. To hide it, open template.html and about.html, find this line in the <nav> section, and add this simbols around it, like:
+
+  < !-- <li><a href="./projects-alt.html">Proyectos</a></li> -- >
+-->
 # Mis Proyectos
 
 Una colección de proyectos en los que he trabajado, mostrando mis habilidades e intereses.
