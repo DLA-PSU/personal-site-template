@@ -1,3 +1,8 @@
+[!NOTE]
+This page uses Markdown formatting. Not sure how to write Markdown? 
+See the guide: [https://github.com/DLA-PSU/personal-site-template#basic-markdown-formatting](https://github.com/DLA-PSU/personal-site-template#basic-markdown-formatting)
+(delete all above here on your file)
+
 # My Projects
 
 A collection of projects I've worked on, showcasing my skills and interests.
