@@ -1,6 +1,6 @@
 [!NOTE]
 This page uses Markdown formatting. Not sure how to write Markdown? 
-See the guide: https://github.com/DLA-PSU/personal-site-template#basic-markdown-formatting
+See the guide: [https://github.com/DLA-PSU/personal-site-template#basic-markdown-formatting](https://github.com/DLA-PSU/personal-site-template#basic-markdown-formatting)
 (delete all above here on your file)
 
 # Curriculum Vitae
