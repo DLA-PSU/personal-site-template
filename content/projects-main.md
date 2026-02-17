@@ -1,7 +1,6 @@
-[!NOTE]
-This page uses Markdown formatting. Not sure how to write Markdown? 
-See the guide: [https://github.com/DLA-PSU/personal-site-template#basic-markdown-formatting](https://github.com/DLA-PSU/personal-site-template#basic-markdown-formatting)
-(delete all above here on your file)
+<div class="note">
+💡 This page uses Markdown. Not sure how to format things? See the <a href="https://github.com/DLA-PSU/personal-site-template#basic-markdown-formatting">Markdown guide</a> in the README.
+</div>  <!-- (delete all above here on your file)-->
 
 # My Projects
 
