@@ -1,6 +1,6 @@
 # personal-site-template
 
-Created by [Jennifer Isasi](https://jenniferisasi.github.io) for a workshop on personal sites for graduate students. Last updated February 2026. 
+Created by [Jennifer Isasi](https://jenniferisasi.github.io) for a workshop on personal sites for graduate students. Last updated February 2026. AI Usage Disclosure: This document was created with minimal assistance from Claude.
 
 You can preview the site at: https://dla-psu.github.io/personal-site-template/
 
@@ -8,13 +8,13 @@ GitHub provides a preview of files before committing changes. If you prefer to w
 
 ---
 
-A template to create a simple, static personal site with bio, projects, and CV. It turns Markdown files into web pages automatically. No coding required for updates.
+A template to create a simple, static personal site with bio, projects (bilingual in the template), and CV. It turns Markdown files into web pages automatically. No coding required for updates.
 
 The site has four pages:
 
 - **About** (homepage) — with visual timeline and optional PhD progress tracker
 - **Projects** — in your primary language
-- **Projects** — in an alternative language
+- **Projects** — in an alternative language OR for a secondary project
 - **CV/Resume**
 
 ---
@@ -47,15 +47,16 @@ The site has four pages:
      → Your site will be at `https://your-username.github.io/`
    - **For a project site**: Name it anything (e.g. `my-portfolio`)
      → Your site will be at `https://your-username.github.io/repository-name/`
+     → ie. this site is `https://dla-psu.github.io/personal-site-template/` because it is a project within the DLA-PSU initiatives
 4. Set it to **Public**
 5. Click **"Create repository"**
 
-GitHub will copy all files to your new repo. Then you can edit them with your own information.
+GitHub will copy all files to your new repo in a couple of minutes. Then you can edit them with your own information.
 
-**Enable GitHub Pages after copying:**
+**Enable GitHub Pages after copying to deploy/publish the site:**
 
-1. Go to **Settings** in your new repository
-2. Click **Pages** on the left side
+1. Go to **Settings** in your new repository (left, on the top bar navigation)
+2. Click **Pages** on the left side menu
 3. Under "Source", select **GitHub Actions**
 4. Your site will be live in 2–3 minutes
 
