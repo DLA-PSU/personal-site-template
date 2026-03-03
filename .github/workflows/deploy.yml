@@ -33,7 +33,7 @@ jobs:
       - name: Convert Markdown to HTML
         run: |
           # Copy about.html as index (landing page)
-          cp about.html _site/index.html
+          cp index.html _site/index.html
           
           # Convert projects (main language)
           pandoc content/projects-main.md -o _site/projects-main.html \
