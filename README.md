@@ -74,7 +74,7 @@ GitHub will copy all files to your new repo in a couple of minutes. Then you can
 
 ### For the About page:
 
-1. Navigate to `about.html` in the root folder
+1. Navigate to `index.html` in the root folder
 2. Click the pencil icon
 3. Edit the HTML directly — it's clearly structured with comments explaining each section
 4. Commit changes
@@ -83,7 +83,7 @@ GitHub will copy all files to your new repo in a couple of minutes. Then you can
 
 The footer appears in two places and should match on all pages.
 
-**1. About page footer** — open `about.html` and find:
+**1. About page footer** — open `index.html` and find:
 
 ```html
 <footer>
@@ -100,7 +100,7 @@ Replace `[Your Name]` with your name in both files.
 1. Open `template.html`
 2. Find the `<nav>` section
 3. Change "Projects" and "Proyectos" to your preferred labels (e.g. "Projets" for French, "Projekte" for German)
-4. Make the same update in `about.html` to keep navigation consistent
+4. Make the same update in `index.html` to keep navigation consistent
 
 ---
 
@@ -110,7 +110,7 @@ Replace `[Your Name]` with your name in both files.
 
 | File | Purpose |
 |------|---------|
-| `about.html` | About page / homepage (timeline + optional PhD tracker) |
+| `index.html` | About page / homepage (timeline + optional PhD tracker) |
 | `template.html` | Page layout used for all Markdown-based pages |
 | `styles.css` | Colors and fonts for the entire site |
 | `.github/workflows/deploy.yml` | Instructions for GitHub on how to build the site |
@@ -134,7 +134,7 @@ Replace `[Your Name]` with your name in both files.
 
 ## Customizing the About Page
 
-The About page (`about.html`) is an HTML file with clearly labeled comment blocks. You edit it directly in GitHub by clicking the pencil icon.
+The About page (`index.html`) is an HTML file with clearly labeled comment blocks. You edit it directly in GitHub by clicking the pencil icon.
 
 ### Timeline
 
@@ -142,7 +142,7 @@ The timeline displays your education and career history. Items are listed with t
 
 **To add a new timeline item:**
 
-1. Open `about.html`
+1. Open `index.html`
 2. Find the timeline section
 3. Copy an existing block:
 
@@ -167,13 +167,13 @@ An optional section you can enable to display your degree progress, milestones, 
 
 **To enable it:**
 
-1. Open `about.html`
+1. Open `index.html`
 2. Find the section starting with `<!-- OPTIONAL PhD PROGRESS TRACKER`
 3. Delete the `<!--` line at the beginning of the section
 4. Scroll down and delete the `-->` line at the end
 5. Commit your changes
 
-**To customize it, update these fields inside `about.html`:**
+**To customize it, update these fields inside `index.html`:**
 
 - **Degree title** — e.g. "PhD in History"
 - **Year progress** — e.g. "Year 2 of 5"
@@ -269,7 +269,7 @@ The About page uses HTML. Here are the essentials:
 <img src="./images/photo.jpg" alt="Description">
 ```
 
-The `about.html` file has comments (text between `<!--` and `-->`) explaining what each section does — you don't need to touch anything outside those labeled areas.
+The `index.html` file has comments (text between `<!--` and `-->`) explaining what each section does — you don't need to touch anything outside those labeled areas.
 
 For more: [Viewing HTML Files](https://programminghistorian.org/en/lessons/viewing-html-files) by William J. Turkel and Adam Crymble.
 
@@ -280,7 +280,7 @@ For more: [Viewing HTML Files](https://programminghistorian.org/en/lessons/viewi
 When you commit changes, GitHub automatically rebuilds your site:
 
 - **Markdown files** (Projects, CV): converted to HTML using Pandoc, then wrapped in `template.html` (which adds navigation and styling)
-- **`about.html`**: copied directly to the site — no conversion needed
+- **`index.html`**: copied directly to the site — no conversion needed
 - **Images and CSS**: copied as-is
 
 This all happens in 2–3 minutes. You never need to trigger it manually.
@@ -353,7 +353,7 @@ To change them:
 <li><a href="./projects-lang3.html">Your Label</a></li>
 ```
 
-3. Add the same link to the `<nav>` section in `about.html`
+3. Add the same link to the `<nav>` section in `index.html`
 4. Commit
 
 Your new project page will appear in the navigation on all pages.
